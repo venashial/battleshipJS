@@ -17,7 +17,7 @@ The game board is represented as an array. The types of value a coordinate can c
 `b` - battleship\
 `d` - destroyer\
 `s` - submarine\
-`p` - patrol boat\
+`p` - patrol boat
 
 > Note: When referring to the opposing teams ships, any ship defined coordinate (like "c") means the ship is sunken.
 
@@ -49,7 +49,6 @@ There are 5 ships in classic battleship:
 Required:
 - `username: <username>`
 
-<br >
 <br >
 
 ### Private:
