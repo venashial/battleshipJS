@@ -1,0 +1,20 @@
+a.watermark {
+  z-index: 1;
+  position: fixed;
+  bottom: 2vh;
+  right: 2vw;
+  color: rgba($color_offwhite, 0.3);
+  font-size: $font-ms;
+}
+
+a.watermark:hover {
+  color: $color_offwhite !important;
+}
+
+button.back_button {
+  z-index: 10;
+  position: fixed;
+  bottom: 2vh;
+  left: 2vw;
+  width: 7rem;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BattleshipJS - Singleplayer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="legacy/style.css" />
+    <link rel="stylesheet" type="text/css" href="legacy/singleplayer/styles/style.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="user-scalable=no" />
+    <link rel="shortcut icon" href="legacy/singleplayer/assets/icons/favicon.ico" />
+  </head>
+
+  <body>
+    <!-- The firebase JavaScript files are locally stored so the p5 editor works -->
+
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-database.js"></script>
+
+    <script src="legacy/singleplayer/scripts/multiplayer.js"></script>
+    <script src="legacy/singleplayer/scripts/sketch.js"></script>
+    <script src="legacy/singleplayer/scripts/stats.js"></script>
+
+    <h1>
+      <span class="bluewhite">BATTLE</span><span class="red">SHIP</span
+      ><span class="tiny lightpurple">JS</span>
+    </h1>
+
+    <div class="grid main">
+    <div>
+
+      <div class="gameboard">
+        <p class="gameboard-labels top">
+          1 2 3 4 5 6 7 8 9 <span class="noletterspacing">10</span>
+        </p>
+
+        <div class="grid">
+          <p class="gameboard-labels side">
+            A<br />B<br />C<br />D<br />E<br />F<br />G<br />H<br />I<br />J
+          </p>
+          <div id="gameboardcanvas"></div>
+        </div>
+      </div>
+
+      <div class="gamecontrols">
+        <button
+          onclick="resetGame()"
+          type="button"
+          class="resetButtonStyle"
+          style="width: auto"
+        >
+          Reset Game
+        </button>
+        <button
+          onclick="location.href='../#statistics'"
+          type="button"
+          class="resetButtonStyle"
+          style="width: auto"
+        >
+          View Leaderboard
+        </button>
+        <button
+          onclick="location.href='../#how-to-play'"
+          type="button"
+          class="resetButtonStyle"
+          style="width: auto"
+        >
+          Read Guide
+        </button>
+      </div>
+    </div>
+
+
+    <div class="stats">
+      <p><span class="emphasis">Misses</span><span class="stat-value" id="misses">0</span></p>
+
+      <p><span class="emphasis">Hits</span><span class="stat-value" id="hits">0</span></p>
+
+      <p><span class="emphasis">Guess Ratio</span><span class="stat-value" id="guessratio">0%</span></p>
+
+      <p><span class="emphasis">Wins</span><span class="stat-value" id="wins">0</span></p>
+
+      <p><span class="emphasis">Points</span><span class="stat-value" id="sessionpoints">0</span></p>
+
+      <p><span class="emphasis">Highscore</span><span class="stat-value" id="localrecordpoints">0</span></p>
+
+    
+
+    </div>
+  </div>
+
+<%- include('../partials/footer'); -%>
+
+  </body>
+</html>

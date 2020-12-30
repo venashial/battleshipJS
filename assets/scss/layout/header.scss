@@ -1,0 +1,28 @@
+h1 {
+  font-size: $font-xxl;
+  font-weight: $weight-thick;
+  margin: 3rem 0 1.5rem;
+  letter-spacing: 0.1rem;
+
+  .tiny {
+  font-size: $font-l;
+  font-weight: $weight-thin;
+  }
+
+  .red_text {
+  color: $color-red;
+  }
+
+  .offwhite_text {
+  color: $color-offwhite;
+  }
+
+  .purple_text {
+  color: $color-purple;
+  }
+}
+
+h2 {
+  font-weight: $weight-medium;
+  margin: 1rem 0 1rem;
+}

@@ -1,0 +1,520 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
+*, *:before, *:after {
+  box-sizing: border-box;
+  outline: none; }
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  color: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: none; }
+
+ol, ul {
+  padding-left: calc(2rem + 5px); }
+
+footer, header, nav, section, main {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+input {
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit; }
+
+select {
+  font: inherit; }
+
+body {
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Roboto, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 1rem; }
+
+h1, h2, h3 {
+  font-family: Raleway, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Roboto, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  text-align: center; }
+
+h4, h5, h6 {
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Roboto, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; }
+
+h1, h4 {
+  font-size: 4rem; }
+
+h2, h5 {
+  font-size: 3rem; }
+
+h3, h6 {
+  font-size: 2rem; }
+
+p {
+  line-height: 1.25rem; }
+
+button {
+  font-family: Raleway, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Roboto, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 1.5rem; }
+
+html {
+  font-size: 2.8vmin; }
+
+body {
+  background-color: #1C1B29;
+  color: #DAE7FF; }
+
+button {
+  margin: 1rem;
+  margin-left: 1.1rem;
+  margin-right: 1.1rem;
+  position: relative;
+  background-color: rgba(28, 27, 41, 0.5);
+  border: 0.3rem solid #DAE7FF;
+  border-radius: 0.4rem;
+  font-weight: normal;
+  color: #DAE7FF;
+  padding: 0.4rem 1rem 0.4rem 1rem;
+  width: auto;
+  height: auto;
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer; }
+
+button:hover {
+  background-color: #DAE7FF;
+  color: #1C1B29;
+  text-shadow: -0.03rem 0 #1C1B29, 0.03rem 0 #1C1B29; }
+
+a.watermark {
+  z-index: 1;
+  position: fixed;
+  bottom: 2vh;
+  right: 2vw;
+  color: rgba(218, 231, 255, 0.3);
+  font-size: 1.3rem; }
+
+a.watermark:hover {
+  color: #DAE7FF !important; }
+
+button.back_button {
+  z-index: 10;
+  position: fixed;
+  bottom: 2vh;
+  left: 2vw;
+  width: 7rem; }
+
+h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin: 3rem 0 1.5rem;
+  letter-spacing: 0.1rem; }
+  h1 .tiny {
+    font-size: 2rem;
+    font-weight: 400; }
+  h1 .red_text {
+    color: #ED988D; }
+  h1 .offwhite_text {
+    color: #DAE7FF; }
+  h1 .purple_text {
+    color: #8c6fe5; }
+
+h2 {
+  font-weight: 600;
+  margin: 1rem 0 1rem; }
+
+canvas.background {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -2; }
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
+button {
+  margin: 1rem;
+  margin-left: 1.1rem;
+  margin-right: 1.1rem;
+  position: relative;
+  display: table-cell;
+  font-family: 'Raleway', sans-serif;
+  background-color: rgba(28, 27, 41, 0.5);
+  border: 0.3rem solid #DAE7FF;
+  border-radius: 0.4rem;
+  font-size: 1.5rem;
+  font-weight: normal;
+  padding: 0rem;
+  width: 13rem;
+  height: 3rem;
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer; }
+
+button:active:after {
+  padding: 0;
+  opacity: 1;
+  transition: 0s; }
+
+button:hover {
+  background-color: #DAE7FF;
+  color: #1C1B29;
+  font-weight: 800; }
+
+.redbutton {
+  color: #1C1B29;
+  background-color: #ED988D;
+  border: 0.3rem solid #ED988D;
+  height: 4.5rem;
+  font-weight: 800; }
+
+.redbutton:hover {
+  background-color: rgba(237, 152, 141, 0.3);
+  color: #ED988D;
+  font-weight: 400; }
+
+.bluebutton {
+  color: #1C1B29;
+  background-color: #8c6fe5;
+  border: 0.3rem solid #8c6fe5;
+  height: 4.5rem;
+  font-weight: 800; }
+
+.bluebutton:hover {
+  background-color: rgba(140, 111, 229, 0.3);
+  color: #8c6fe5;
+  font-weight: 400; }
+
+div.button_panel {
+  margin-top: 5rem;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr; }
+
+div.actionboxes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  margin: 0vh 0 0vh 0; }
+  div.actionboxes div.action_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.3rem solid #DAE7FF;
+    border-radius: 0.4rem;
+    background-color: rgba(28, 27, 41, 0.5);
+    color: #DAE7FF;
+    stroke: #DAE7FF;
+    font-weight: bold;
+    margin: 1rem;
+    transition-duration: 0.4s;
+    width: 30rem;
+    height: 6rem; }
+
+label {
+  cursor: text; }
+
+div.actionbox-create:hover {
+  background-color: rgba(218, 231, 255, 0.3);
+  cursor: pointer; }
+
+div.actionbox-create:active {
+  background-color: #dae7ff;
+  color: #1C1B29;
+  stroke: #1C1B29; }
+
+.modetext {
+  margin: 0 0rem 0 0rem; }
+
+div.modetext > h3 {
+  text-align: left;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 1rem 0 1rem !important; }
+
+svg {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 1.5rem 0 0; }
+
+p {
+  font-size: 1rem;
+  font-weight: 600; }
+
+div.inputarea {
+  display: flex;
+  height: 2.5rem; }
+
+input {
+  margin: 0.5rem 0 1rem;
+  background-color: rgba(218, 231, 255, 0.2);
+  width: 20.5rem;
+  height: 1.5rem;
+  letter-spacing: 0.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 0.1rem solid rgba(218, 231, 255, 0.2);
+  border-radius: 0.25rem;
+  color: #DAE7FF;
+  padding-left: 0.4rem; }
+
+input.lightwhite {
+  background-color: rgba(218, 231, 255, 0.2); }
+
+input.red {
+  background-color: rgba(237, 152, 141, 0.2); }
+
+input.green {
+  background-color: rgba(128, 201, 142, 0.2); }
+
+::placeholder {
+  color: rgba(218, 231, 255, 0.7);
+  font-weight: 400;
+  letter-spacing: 0rem; }
+
+p.entermessage {
+  color: rgba(218, 231, 255, 0.8);
+  display: none;
+  position: absolute;
+  margin: 0;
+  margin-top: 0.8rem;
+  margin-left: 14rem; }
+
+p.entermessage.light {
+  color: rgba(218, 231, 255, 0.1); }
+
+div#multiplayer-menu {
+  padding-bottom: 3rem; }
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1rem;
+  margin: 1rem;
+  text-align: center; }
+
+div#how-to-play {
+  overflow-y: scroll;
+  padding-bottom: 7rem; }
+
+/* Collapsible Texts */
+.accordion {
+  color: #1C1B29;
+  cursor: pointer;
+  padding: 0.5rem;
+  width: 30rem;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 0.9rem;
+  transition: 0.4s;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.5rem;
+  z-index: 2; }
+
+button.accordion {
+  padding-left: 2rem; }
+
+.accordion.grey {
+  background-color: #a6a6a6; }
+
+.accordion.red {
+  background-color: #ED988D; }
+
+.accordion.lightpurple {
+  background-color: #8c6fe5; }
+
+.active, .accordion:hover {
+  background-color: #DAE7FF;
+  color: #1C1B29; }
+
+.accordion:after {
+  content: '\002B';
+  font-weight: normal;
+  float: right;
+  margin-right: 0.5rem;
+  margin-top: -0.8rem;
+  font-size: 3rem;
+  transition: 0.4s; }
+
+.accordion:hover:after {
+  font-weight: bold; }
+
+.accordion.active:after {
+  content: "\2212"; }
+
+div.panel {
+  z-index: 2;
+  display: flexbox;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  margin-top: 0;
+  padding: 0 0rem;
+  border-radius: 0.4rem;
+  width: 30rem;
+  background-color: #DAE7FF;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  margin-left: 1rem; }
+
+p.panel {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  color: #1C1B29;
+  padding: 0.7rem;
+  line-height: 1.5rem; }
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+div::-webkit-scrollbar {
+  display: none; }
+
+/* Hide scrollbar for IE, Edge and Firefox */
+div {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */ }
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none; }
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */ }
+
+.black {
+  font-weight: 1000; }
+
+p.credits {
+  font-size: 1.3rem; }
+
+div#statistics {
+  width: 90%;
+  overflow: hidden; }
+
+.page {
+  width: 100%;
+  display: flex;
+  margin: 1rem;
+  margin-left: 0; }
+
+.page > div {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 0.4rem;
+  text-align: center;
+  padding: 0rem;
+  font-size: 0.5rem;
+  width: 40%;
+  flex: 1; }
+
+.page > div > p {
+  font-size: 0.8rem;
+  color: #DAE7FF; }
+
+.page > div > h3 {
+  font-size: 1.5rem;
+  color: white;
+  margin: 1rem 0 1rem 0;
+  font-weight: 650; }
+
+.pageleft {
+  margin-right: 1rem; }
+
+p.disclamer {
+  color: rgba(160, 173, 197, 0.5); }
+
+* {
+  box-sizing: border-box; }
+
+/* Style the tab */
+.tab {
+  float: left;
+  width: 30%;
+  height: auto; }
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  color: black;
+  padding: 0.5rem;
+  padding-top: 0.8rem;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 1.05rem;
+  margin: 1rem 0 1rem; }
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  font-weight: 800; }
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0 0.75rem;
+  width: 70%;
+  height: auto;
+  overflow-y: scroll; }
+
+.redbackground, .tab button.redbackground:hover {
+  background-color: #eec1bb; }
+
+.lightpurplebackground, .tab button.lightpurplebackground:hover {
+  background-color: #ad9be2; }
+
+.tab button.active.redbackground {
+  background-color: #ED988D; }
+
+.tab button.active.lightpurplebackground {
+  background-color: #8c6fe5; }
+
+.tab button:after {
+  content: ' \002B';
+  float: right;
+  margin-top: -1rem;
+  margin-right: 0.05rem;
+  font-size: 3rem; }
+
+.tab button.active:after {
+  content: " \2212";
+  margin-right: 0rem; }

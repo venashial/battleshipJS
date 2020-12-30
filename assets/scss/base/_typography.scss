@@ -1,0 +1,40 @@
+//Roboto
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+//Raleway
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+  font-family: $body-font;
+  font-size: $font-s;
+}
+
+h1, h2, h3 {
+  font-family: $header-font;
+  text-align: center;
+}
+
+h4, h5, h6 {
+    font-family: $body-font;
+}
+
+h1, h4 {
+  font-size: $font-xxl;
+}
+
+h2, h5 {
+  font-size: $font-xl;
+}
+
+h3, h6 {
+  font-size: $font-l;
+}
+
+p {
+    line-height: 1.25rem;
+}
+
+button {
+  font-family: $header-font;
+  font-size: $font-m;
+}

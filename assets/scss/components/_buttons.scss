@@ -1,0 +1,26 @@
+button {
+  margin: 1rem;
+  margin-left: 1.1rem;
+  margin-right: 1.1rem;
+  position: relative;
+  background-color: rgba(28, 27, 41, 0.5);
+  border: 0.3rem solid $color_offwhite;
+  border-radius: 0.4rem;
+  font-weight: normal;
+  color: $color_offwhite;
+  // top right bottom left
+  padding: 0.4rem 1rem 0.4rem 1rem;
+  width: auto;
+  height: auto;
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: $color_offwhite;
+  color: $color_bg;
+  text-shadow: -0.03rem 0 $color_bg, 0.03rem 0 $color_bg;
+}

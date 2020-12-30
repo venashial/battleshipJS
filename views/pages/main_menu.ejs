@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <%- include('../partials/head'); -%>
+  </head>
+  <body>
+
+<%- include('../partials/header'); -%>
+
+<!-- Background -->
+<canvas class="background"></canvas>
+<script src="./js/pages/main_menu/background.js"></script>
+
+<script src="./js/pages/main_menu/navigation.js"></script>
+
+<!-- Main Menu Buttons -->
+    <div id="main-menu" style="display: none">
+      <div class="button_panel">
+        <button
+          class="redbutton"
+          onclick="location.href='./singleplayer'"
+          type="button"
+        >
+          Singleplayer
+        </button>
+
+        <button
+          class="bluebutton"
+          onclick="openMultiplayerMenu()"
+          type="button"
+        >
+          Multiplayer
+        </button>
+
+        <button
+          onclick="openStatistics()"
+          type="button"
+        >
+          Statistics
+        </button>
+
+        <button onclick="openHowToPlay()" type="button">How to Play</button>
+
+        <button
+          onclick="openCredits()"
+          type="button"
+        >
+          Credits
+        </button>
+
+        <button
+          onclick="location.href='../'"
+          type="button"
+        >
+          Quit Game
+        </button>
+      </div>
+    </div>
+
+    <!-- Multiplayer Menu -->
+    <div id="multiplayer-menu" style="display: none">
+      <h2>Multiplayer</h2>
+      <script src="./js/pages/main_menu/multiplayer-menu.js"></script>
+
+      <div class="actionboxes">
+        <a
+          class="gameboxes"
+          href="./multiplayer/"
+        >
+          <div class="action_box">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-link"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="16"></line>
+              <line x1="8" y1="12" x2="16" y2="12"></line>
+            </svg>
+            <div class="modetext">
+              <h3>Create New Game</h3>
+              <p>Create a new game that is joinable by others</p>
+            </div>
+          </div>
+        </a>
+
+        <label for="joincode">
+          <div class="action_box">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-link"
+            >
+              <path
+                d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"
+              ></path>
+              <path
+                d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"
+              ></path>
+            </svg>
+            <div class="modetext">
+              <h3>Join an Existing Game</h3>
+              <div class="inputarea">
+              <form id="join_game_form">
+                <input
+                  id="joincode"
+                  type="text"
+                  placeholder="Type a code like 𝟭𝗮𝟮𝗯𝟯𝗰𝟰𝗱"
+                  pattern="[a-zA-Z0-9-]+"
+                  maxlength="8"
+                  spellcheck="false"
+                />
+              </form>
+                <p class="entermessage" id="entermessage">Press Enter ⤸</p>
+              </div>
+            </div>
+          </div>
+        </label>
+      </div>
+
+    </div>
+
+    <!-- How to Play -->
+    <div id="how-to-play" style="display: none">
+      <h2>How To Play</h2>
+
+      <button class="accordion grey">General Guide</button>
+      <div class="panel">
+        <p class="panel">
+          So you want to learn how to play Battleship? You've come to the right
+          place. The gameboard where all the action takes place is a grid of
+          squares. Under some of those squares is a hidden ship. The ship's
+          length is 3 squares long. All of the squares marking the ship will be
+          adjacent. The goal of the game is to guess where the hidden ship is in
+          the least amount of guesses. If you choose a square and miss (not
+          hitting the hidden ship) the square will turn grey. If you hit the
+          square and it turns red, that means you've hit part of the ship.
+          <br /><br />
+          If you are playing multiplayer, both of you will have the hidden ship
+          in the same location but you will not be able to see each other's
+          guesses.
+        </p>
+      </div>
+
+      <button class="accordion red">Singleplayer</button>
+      <div class="panel">
+        <p class="panel">
+          <span class="black">1.</span> Click on singleplayer from the main
+          menu.<br />
+          <span class="black">2.</span> Select a square by clicking on it or
+          typing the coordinates into the input box and press enter.<br />
+          <span class="black">3.</span> The square will turn grey if you missed
+          and red if it was a hit.<br />
+          <span class="black">4.</span> Once you hit all the 3 adjacent squares
+          that make up the ship, you win the game.<br />
+          <span class="black">5.</span> Check the worldwide high score on the
+          right panel to see how you stack up.
+        </p>
+      </div>
+
+      <button class="accordion lightpurple">Multiplayer</button>
+      <div class="panel">
+        <p class="panel">
+          <span class="black">1.</span> Click on multiplayer from the main
+          menu.<br />
+          <span class="black">2.</span> Enter a game code a friend or click the
+          Create New Game button.<br />
+          <span class="black">3.</span> Once the "Players in room: 2" you can
+          start playing.<br />
+          <i>
+            To the bottom right of the gameboard there is a note that tells you
+            when it is your turn.</i
+          ><br />
+          <span class="black">4.</span> When it is your turn, you can click a
+          square on the grid to guess if there is a ship there.<br />
+          <span class="black">5.</span> The square will turn grey if you missed
+          and red if it was a hit.<br />
+          <span class="black">6.</span> Once you hit all the 3 adjacent squares
+          that make up the ship, you win the game.<br />
+          <span class="black">7.</span> On the right of the gameboard you will
+          see a message that says "You Won" or "They Won".<br />
+        </p>
+      </div>
+
+      <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+              panel.style.maxHeight = null;
+            } else {
+              panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+          });
+        }
+      </script>
+
+    </div>
+
+    <!-- Credits -->
+    <div id="credits" style="display: none">
+      <h2>Credits</h2>
+      <p class="credits">
+        Coded & Maintained by venashial
+        <br><br>
+        Guidance & Singleplayer game logic by Ms. Orret
+        <br><br>
+        Main menu wave background by Hakim El Hattab        
+
+
+      </p>
+    </div>
+
+    <!-- Statistics -->
+    <div id="statistics" style="display: none">
+
+      <h2>Statistics</h2>
+
+        
+        <div class="tab">
+          <button class="tablinks redbackground" onclick="openCity(event, 'Singleplayer')" id="defaultOpen">Singleplayer</button>
+          <button class="tablinks lightpurplebackground" onclick="openCity(event, 'Multiplayer')">Multiplayer</button>
+        </div>
+        
+        <div id="Singleplayer" class="tabcontent">
+          <div class="page">
+
+            <div class="pageleft">
+            <h3>Personal</h3>
+            <p>Highscore:<br>9876</p>
+            <p>Best guess ratio:<br>100%</p>
+            <p>Most wins:<br>85</p>
+            <p>Most misses:<br>85</p>
+            <p>Longest Idle time:<br>45 sec</p>
+            <p>Longest game:<br>3045 sec</p>
+
+            </div>  
+    
+            <div class="pageright">
+              <h3>Worldwide</h3>
+              <p>Best guess ratio: 100%</p>
+            </div>
+    
+          </div>
+
+          <div style="background-color: transparent;">
+            <p class="disclamer">Disclamer: This page is still in progress. Your scores may be reset!</p>
+            </div>
+
+        </div>
+        
+        <div id="Multiplayer" class="tabcontent">
+          <div class="page">
+
+            <div class="pageleft">
+            <h3>Personal</h3>
+            <p>Best guess ratio: 10%</p>
+            </div>  
+    
+            <div class="pageright">
+              <h3>Worldwide</h3>
+              <p>Best guess ratio: 10%</p>
+            </div>
+    
+            
+          </div>
+
+          <div style="background-color: transparent;">
+            <p class="disclamer">Disclamer: This page is still in progress. Your scores may be reset!</p>
+            </div>
+        </div>
+        
+        <script>
+        function openCity(evt, cityName) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(cityName).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+        
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+        </script>
+
+</div>
+
+
+<%- include('../partials/footer'); -%>
+
+<script src="./js/pages/main_menu/hashes.js"></script>
+
+  </body>
+</html>
