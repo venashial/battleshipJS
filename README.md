@@ -11,13 +11,13 @@ BattleshipJS is written in NodeJS and uses express for the web server and api re
 ### Game board
 The game board is represented as an array. The types of value a coordinate can contain are as follows:
 
-`0` - untouched
-`1` - hit
-`c` - carrier
-`b` - battleship
-`d` - destroyer
-`s` - submarine
-`p` - patrol boat
+`0` - untouched\
+`1` - hit\
+`c` - carrier\
+`b` - battleship\
+`d` - destroyer\
+`s` - submarine\
+`p` - patrol boat\
 
 > Note: When referring to the opposing teams ships, any ship defined coordinate (like "c") means the ship is sunken.
 
@@ -49,8 +49,9 @@ There are 5 ships in classic battleship:
 Required:
 - `username: <username>`
 
-<br>
-<br>
+<br >
+<br >
+
 ### Private:
 
 > Note: All private requests require an authorization cookie. The cookie must be named `uuid` and contain the user's uuid which the server generates and sends back to the client on a create account request.
