@@ -10,6 +10,7 @@ BattleshipJS is written in NodeJS and uses express for the web server and api re
 
 ### Game board
 The game board is represented as an array. The types of value a coordinate can contain are as follows:
+
 `0` - untouched
 `1` - hit
 `c` - carrier
