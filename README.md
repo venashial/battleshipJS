@@ -53,7 +53,6 @@ There are 5 ships in classic battleship:
 Required:
 - `username: <username>`
 
-<br >
 
 ### Private:
 
@@ -84,6 +83,26 @@ Required:
 
 Required:
 - `location: [<x>, <y>]`
+
+```
+{
+  result: "miss" / "hit" / "sunk",
+  ship_type: "c" / "b" / "d" / "s" / "p",
+  ship_parts: [
+  [<x>, <y>],
+  [<x1>, <y1>],
+  [<x2>, <y2>],
+  [<x3>, <y3>],
+  [<x4>, <y4>]
+  ]
+}
+```
+
+> Note: Only when "sunk" is returned as the result, the ship type and parts will be present.
+
+#### Leave room
+**POST** <domain>/multiplayer/<room_id>/leave_room
+(User is automatically removed from room)
 
 ## Dependencies
  - Express
