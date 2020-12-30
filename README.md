@@ -6,6 +6,10 @@ The Server + Client dynamic duo!
 
 BattleshipJS is written in NodeJS and uses express for the web server and api requests, sass for styling, and ejs for html generation. Any client can connect and play using the API documented. The server logic acts much like actual Battleship and simply replies whether the shot missed, hit, or sunk. The rendering is all client side.
 
+> **Current state:**
+> Moving away from websockets and simply using http requests. Implementing uuid and hidden rooms.
+
+
 ## Game
 
 ### Game board
@@ -80,3 +84,9 @@ Required:
 
 Required:
 - `location: [<x>, <y>]`
+
+## Dependencies
+ - Express
+ - CORS
+ - bodyParser
+ - node-sass
