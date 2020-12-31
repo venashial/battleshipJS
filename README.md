@@ -86,7 +86,7 @@ Required:
 
 Returns:
 
-```
+```js
 {
   result: "miss" / "hit" / "sunk",
   ship_type: "c" / "b" / "d" / "s" / "p",
@@ -108,7 +108,7 @@ Returns:
 
 Returns:
 
-```json
+```js
 {
   status: "preparing" / "ongoing" / "ended",
   players: [<player1>, <player2>], //In usernames
