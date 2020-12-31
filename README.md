@@ -84,6 +84,8 @@ Required:
 Required:
 - `location: [<x>, <y>]`
 
+Returns:
+
 ```
 {
   result: "miss" / "hit" / "sunk",
@@ -99,6 +101,34 @@ Required:
 ```
 
 > Note: Only when "sunk" is returned as the result, the ship type and parts will be present.
+
+#### Room state
+**GET** <domain>/multiplayer/<room_id>/state
+(Returns relevant data about the opponent and the games current state)
+
+Returns:
+
+```json
+{
+  status: "preparing" / "ongoing" / "ended",
+  players: [<player1>, <player2>], //In usernames
+  placing_ships: [],
+  guessing: "",
+  winner: "",
+  scores: {
+    <player1>: {
+      misses: 0,
+      hits: 0,
+      sunk: 0
+    },
+    <player2>: {
+      misses: 0,
+      hits: 0,
+      sunk: 0
+    }
+  }
+}
+```
 
 #### Leave room
 **POST** <domain>/multiplayer/<room_id>/leave_room
